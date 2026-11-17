@@ -6,7 +6,7 @@
 
 ThreadClip hangs your Codex chats from the top edge of your Mac. Hover over the middle third of the top edge to see what is running, what needs your input, and your recent chats. Click a card to open that chat in Codex.
 
-![ThreadClip on macOS, with cards for a running task, a remote question, a completed task, and a recent chat](docs/images/overview.png)
+![Running, waiting, completed, and recent chats shown together. After an answer, the yellow card moves to Recents.](docs/images/card-states.gif)
 
 ## Get started
 
@@ -38,7 +38,7 @@ Shading marks the hover zone in the demo. The pointer pauses at the left, middle
 | Red dot | A tracked turn ended in failure. The indicator follows the final turn result. |
 | Gray dot | A recent chat. Local and loaded remote chats share this list, sorted by last update. Timestamps show “just now” or whole minutes, hours, and days. |
 
-![Running, waiting, completed, and recent chats shown together. After an answer, the yellow card moves to Recents.](docs/images/card-states.gif)
+![ThreadClip on macOS, with cards for a running task, a remote question, a completed task, and a recent chat](docs/images/overview.png)
 
 - **Get attention when needed.** New yellow, green, and red reminders can open the strip automatically. Unread reminders are saved locally and restored on relaunch. Browsing recent chats produces no new reminders.
 - **Clear a waiting state by responding.** Structured questions can stay yellow after the turn finishes and while some answers are still pending. For an explicit question in the final message, sending a reply starts the next turn and clears the old reminder. An interrupted turn clears its running card.
