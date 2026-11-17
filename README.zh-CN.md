@@ -4,7 +4,7 @@
 
 [English](README.md) · [下载](https://github.com/CamusZ11/ThreadClip/releases/latest)
 
-ThreadClip 把 Codex 会话挂在 Mac 屏幕上沿。鼠标移上去，就能看到哪些会话在运行、哪些需要你操作，以及最近对话。点卡片即可回到 Codex 的对应会话。
+ThreadClip 把 Codex 会话挂在 Mac 屏幕上沿。鼠标移到上沿中央三分之一，就能看到哪些会话在运行、哪些需要你操作，以及最近对话。点卡片即可回到 Codex 的对应会话。
 
 ![ThreadClip 在 macOS 上显示运行中、远程待回答、已完成和最近对话四类卡片](docs/images/overview.png)
 
@@ -25,7 +25,7 @@ ThreadClip 把 Codex 会话挂在 Mac 屏幕上沿。鼠标移上去，就能看
 ## 开始使用
 
 1. 准备 macOS 14 或更新版本，以及 Codex 桌面应用。从 [Releases](https://github.com/CamusZ11/ThreadClip/releases) 下载应用 ZIP。公开 ZIP 使用临时签名，未通过 Apple 公证。如果 macOS 拒绝打开下载的副本，可以按照下文从源码构建。
-2. 打开 `ThreadClip.app`，把鼠标移到主显示器的屏幕上沿。也可以从 ThreadClip 菜单栏图标选择「展开线程」。
+2. 打开 `ThreadClip.app`，把鼠标悬停在主显示器上沿的中央三分之一。也可以从 ThreadClip 菜单栏图标选择「展开线程」。
 3. 在菜单里打开「设置…」，调整最近对话数量、暂停自动弹出，或启用登录时启动。
 
 <img src="docs/images/settings.png" width="460" alt="ThreadClip 的监控、自动弹出和最近对话数量设置">

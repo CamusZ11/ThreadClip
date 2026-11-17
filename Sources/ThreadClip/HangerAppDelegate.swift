@@ -147,7 +147,7 @@ final class HangerAppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private var pointerIsAtStrip: Bool {
         guard let screen = HangerPanel.primaryScreen else { return false }
         let mouse = NSEvent.mouseLocation
-        return NSMouseInRect(mouse, HangerPanel.menuBarBand(of: screen), false)
+        return NSMouseInRect(mouse, HangerPanel.hoverBand(in: HangerPanel.menuBarBand(of: screen)), false)
             || (presentation.isRevealed && panel?.frame.contains(mouse) == true)
     }
 
@@ -217,12 +217,13 @@ final class HangerAppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             return
         }
         let mouse = NSEvent.mouseLocation
-        let inMenuBar = NSMouseInRect(mouse, HangerPanel.menuBarBand(of: screen), false)
-        if !inMenuBar { suppressedUntilPointerLeaves = false }
+        let menuBar = HangerPanel.menuBarBand(of: screen)
+        let inHoverBand = NSMouseInRect(mouse, HangerPanel.hoverBand(in: menuBar), false)
+        if !inHoverBand { suppressedUntilPointerLeaves = false }
         updateEscapeCapture(shouldCaptureEscape(at: mouse))
 
         if !presentation.isRevealed {
-            guard inMenuBar, !suppressedUntilPointerLeaves, menuTrackingDepth == 0, !runtime.cards.isEmpty else {
+            guard inHoverBand, !suppressedUntilPointerLeaves, menuTrackingDepth == 0, !runtime.cards.isEmpty else {
                 hoverStartedAt = nil
                 return
             }
@@ -234,7 +235,7 @@ final class HangerAppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
 
         clampScroll()
-        let inside = inMenuBar || panel.frame.contains(mouse)
+        let inside = inHoverBand || panel.frame.contains(mouse)
         if inside { openedManually = false }
         if !inside, !openedManually, menuTrackingDepth == 0,
            runtime.preferences.isPaused || !runtime.cards.contains(where: \.isUnread) {
@@ -245,7 +246,7 @@ final class HangerAppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let local = panel.convertPoint(fromScreen: mouse)
         let flipped = CGPoint(x: local.x, y: panel.frame.height - local.y)
         let layout = StripLayout(width: panel.frame.width, cards: runtime.cards)
-        let hasControl = !inMenuBar && presentation.hitRects.contains { target, rect in
+        let hasControl = !NSMouseInRect(mouse, menuBar, false) && presentation.hitRects.contains { target, rect in
             switch target {
             case let .card(_, isRecent): layout.clipCardHitArea(rect, isRecent: isRecent).contains(flipped)
             case .earlier, .later, .collapse: rect.contains(flipped)

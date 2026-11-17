@@ -47,8 +47,8 @@ cat > "$bundle/Contents/Info.plist" <<'PLIST'
   <key>CFBundleDisplayName</key><string>ThreadClip</string>
   <key>CFBundleExecutable</key><string>ThreadClip</string>
   <key>CFBundlePackageType</key><string>APPL</string>
-  <key>CFBundleShortVersionString</key><string>0.1.0</string>
-  <key>CFBundleVersion</key><string>1</string>
+  <key>CFBundleShortVersionString</key><string>0.1.1</string>
+  <key>CFBundleVersion</key><string>2</string>
   <key>CFBundleIconFile</key><string>Hanger</string>
   <key>LSMinimumSystemVersion</key><string>14.0</string>
   <key>LSUIElement</key><true/>

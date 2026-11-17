@@ -46,6 +46,11 @@ final class HangerPanel: NSPanel {
                       width: screen.frame.width, height: height)
     }
 
+    static func hoverBand(in menuBar: CGRect) -> CGRect {
+        let third = menuBar.width / 3
+        return CGRect(x: menuBar.minX + third, y: menuBar.minY, width: third, height: menuBar.height)
+    }
+
     func place(on screen: NSScreen) {
         let top = Self.menuBarBand(of: screen).minY
         let target = CGRect(x: screen.frame.minX, y: top - StripLayout.panelHeight,

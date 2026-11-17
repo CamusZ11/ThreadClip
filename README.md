@@ -4,7 +4,7 @@
 
 [简体中文](README.zh-CN.md) · [Download](https://github.com/CamusZ11/ThreadClip/releases/latest)
 
-ThreadClip hangs your Codex chats from the top edge of your Mac. Hover at the top of the screen to see what is running, what needs your input, and your recent chats. Click a card to open that chat in Codex.
+ThreadClip hangs your Codex chats from the top edge of your Mac. Hover over the middle third of the top edge to see what is running, what needs your input, and your recent chats. Click a card to open that chat in Codex.
 
 ![ThreadClip on macOS, with cards for a running task, a remote question, a completed task, and a recent chat](docs/images/overview.png)
 
@@ -25,7 +25,7 @@ The screenshots and animation show the native macOS interface with sample chats.
 ## Get started
 
 1. Use macOS 14 or later and the Codex desktop app. [Releases](https://github.com/CamusZ11/ThreadClip/releases) contains the app ZIP. The ZIP is ad-hoc signed and has no Apple notarization. If macOS rejects the download, build a local copy using the commands below.
-2. Open `ThreadClip.app` and move the pointer to the top edge of the main display. You can also choose **展开线程** from the ThreadClip menu bar icon.
+2. Open `ThreadClip.app` and hover over the middle third of the top edge of the main display. You can also choose **展开线程** from the ThreadClip menu bar icon.
 3. Choose **设置…** from the same menu to change the recent-chat count, pause automatic pop-ups, or enable launch at login.
 
 <img src="docs/images/settings.png" width="460" alt="ThreadClip settings for monitoring, automatic pop-ups, and the number of recent chats">
