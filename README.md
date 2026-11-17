@@ -24,6 +24,10 @@ The screenshots and animation show the native macOS interface with sample chats.
 - **Dismiss the strip.** Use the button at the far right, **收起线程** (Hide chats) in the menu bar, or Esc while the pointer is over the strip. A strip opened by hovering also closes when you move away and there are no unread reminders.
 - **Accessibility.** VoiceOver reads the project, title, status, and unread indicator for each card. With macOS Reduce Motion enabled, cards skip their arrival swing and the running indicator stays still.
 
+Shading marks the hover zone in the demo. The pointer pauses at the left, middle, and right of the top edge, and the strip opens only in the middle third.
+
+![The pointer pauses at the top left, then opens the strip in the shaded middle third. The strip stays closed at the top right.](docs/images/hover.gif)
+
 ## Cards and reminders
 
 | Indicator | Meaning |
@@ -33,8 +37,6 @@ The screenshots and animation show the native macOS interface with sample chats.
 | Green dot | A tracked turn finished successfully. |
 | Red dot | A tracked turn ended in failure. The indicator follows the final turn result. |
 | Gray dot | A recent chat. Local and loaded remote chats share this list, sorted by last update. Timestamps show “just now” or whole minutes, hours, and days. |
-
-![The native strip revealing sample cards and clearing the yellow reminder after an answer](docs/images/hover.gif)
 
 - **Get attention when needed.** New yellow, green, and red reminders can open the strip automatically. Unread reminders are saved locally and restored on relaunch. Browsing recent chats produces no new reminders.
 - **Clear a waiting state by responding.** Structured questions can stay yellow after the turn finishes and while some answers are still pending. For an explicit question in the final message, sending a reply starts the next turn and clears the old reminder. An interrupted turn clears its running card.
